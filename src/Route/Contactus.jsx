@@ -1,12 +1,12 @@
 import React from 'react'
-import {Nav,Contact} from "../components"
+import {Nav,Enquirey} from "../components"
 
 const Contactus = () => {
   return (
     <div>
       <Nav/>
     
-    <Contact/>
+      <Enquirey/>
     </div>
     
   )

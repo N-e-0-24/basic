@@ -1,4 +1,4 @@
-import Aboutus from "./AboutUs";
+import Aboutus from "./Aboutus";
 import Contactus from "./Contactus";
 import Layout from "./Layout";
 export {

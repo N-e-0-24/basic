@@ -71,7 +71,7 @@ const Nav = () => {
                   href="/contactUs"
                   className="block py-2 pl-3 pr-4 mt-10 text-gray-700 rounded hover:text-gray-400"
                 >
-                  Contact Us
+                  Send Us A Query
                 </a>
               </li>
             </ul>

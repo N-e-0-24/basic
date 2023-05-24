@@ -1,6 +1,6 @@
 import React, { useEffect, useRef} from "react";
 import { motion, useAnimation } from "framer-motion";
-import { hospital, img2 } from "../assets";
+import { hospital, img2,Cofounder,founder } from "../assets";
 
 const About = () => {
   
@@ -115,7 +115,7 @@ const About = () => {
             <div className="space-y-4 text-center">
               <img
                 className="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64"
-                src=""
+                src={founder}
                 alt="man"
                 loading="lazy"
                 width="640"
@@ -123,14 +123,14 @@ const About = () => {
               />
               <div>
                 <h4 className="text-2xl">Arijit Majumdar</h4>
-                <span className="block text-sm text-gray-500">CEO-Founder</span>
+                <span className="block text-sm text-gray-700">Founder And Director</span>
               </div>
             </div>
 
             <div className="space-y-4 text-center">
               <img
                 className="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64"
-                src=""
+                src={Cofounder}
                 alt="man"
                 loading="lazy"
                 width="1000"
@@ -138,7 +138,7 @@ const About = () => {
               />
               <div>
                 <h4 className="text-2xl">Brajgopal Chakraborthy</h4>
-                <span className="block text-sm text-gray-500">Co-Founder</span>
+                <span className="block text-sm text-gray-700">Co-Founder And Director</span>
               </div>
             </div>
           </div>

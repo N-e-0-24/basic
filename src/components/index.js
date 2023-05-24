@@ -1,12 +1,12 @@
 import About from "./About";
 import Home from "./Home";
-import Contact from "./Contact";
+import Enquirey from "./Enquirey";
 import Nav from "./Nav"
 import Nopage from "./Nopage";
 import Thank from "./Thank";
 export {
     About,
     Home,
-    Contact,
+    Enquirey,
     Nav,Nopage,Thank
 }

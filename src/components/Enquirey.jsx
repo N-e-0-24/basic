@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-function Contact() {
+
+
+
+function Enquirey() {
     const [show, setShow] = useState(false);
     const navigate = useNavigate();
     const handleSubmit = () =>
@@ -50,4 +53,4 @@ function Contact() {
     );
 }
 
-export default Contact;
+export default Enquirey;
