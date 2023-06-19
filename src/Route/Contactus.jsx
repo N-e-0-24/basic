@@ -1,5 +1,5 @@
 import React from 'react'
-import {Nav,Enquirey} from "../components"
+import {Nav,Enquirey,Form} from "../components"
 
 const Contactus = () => {
   return (

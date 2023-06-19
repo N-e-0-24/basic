@@ -4,7 +4,7 @@ import {logo} from "../assets"
 const Nav = () => {
   return (
     <div>
-       <nav className="fixed w-full z-20 top-0 left-0 border-b">
+       <nav className=" w-full z-20 top-0 left-0 border-b">
   <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="/" className="flex items-center">
       <img src={logo} className="h-20 w-20 mr-1" alt="Avinya Logo" />
@@ -24,7 +24,7 @@ const Nav = () => {
         type="button"
         className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
         aria-controls="navbar-sticky"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         <span className="sr-only">Open main menu</span>
         <svg

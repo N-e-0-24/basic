@@ -5,42 +5,16 @@ import { hospital, img2,Cofounder,founder } from "../assets";
 const About = () => {
   
   const controls = useAnimation();
-  const ref = useRef();
-
-  useEffect(() => {
-    const element = ref.current;
-    if (!element) return;
-
-    const handleScroll = () => {
-      const { top } = element.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-
-      if (top < windowHeight * 0.8) { // Adjust the threshold as needed
-        controls.start({ opacity: 1 });
-      } else {
-        controls.start({ opacity: 0 });
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [controls]);
+  
 
   return (
-    <motion.div
-    ref={ref}
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
+    <div
    
-    exit={{ opacity: 0 }}
       className="about"
     >
       <h1 className=" text-center py-36 text-4xl md:text-5xl md:font-semibold">
-        {" "}
-        About Us{" "}
+       
+        About Us
       </h1>
 
       <div className="-mt-20">
@@ -117,7 +91,7 @@ const About = () => {
                 className="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64"
                 src={founder}
                 alt="man"
-                loading="lazy"
+                
                 width="640"
                 height="805"
               />
@@ -144,7 +118,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
