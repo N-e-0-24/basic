@@ -1,13 +1,20 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
-  const [email,setemail] = useState("");
+  const [email, setEmail] = useState('');
   const navigate = useNavigate();
-  const handleSubmit2 = () => {
 
-    navigate("/thankYou");
-  }
+  const handleSubmit2 = () => {
+    navigate('/thankYou');
+  };
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const isEmailEmpty = email.trim() === '';
+
   return (
     <div>
       <div className="flex min-h-screen items-center justify-center ">
@@ -15,7 +22,7 @@ const Home = () => {
           <div className="max-w-sm rounded-3xl p-px">
             <div className="rounded-[2px]  ">
               <div>
-                <h1 className="text-4xl ml-4 font-bold bg-gradient-to-r from-blue-700 to-amber-500 bg-clip-text text-transparent  ">
+                <h1 className="text-4xl ml-4 font-bold bg-gradient-to-r from-blue-700 to-amber-500 bg-clip-text text-transparent">
                   Coming Soon!
                 </h1>
               </div>
@@ -29,13 +36,22 @@ const Home = () => {
                       type="email"
                       name="email"
                       id="email"
-                      
-                     
+                      value={email}
+                      onChange={handleEmailChange}
                     />
                   </div>
-                  <button  onClick={handleSubmit2} className="h-9 px-2 mx-2 bg-gradient-to-r from-blue-700 to-amber-500 transition duration-500 rounded-md text-white">
+                  <button
+                    onClick={handleSubmit2}
+                    disabled={isEmailEmpty}
+                    
+                    className={`h-9 px-2 mx-2 bg-gradient-to-r from-blue-700 to-amber-500 transition duration-500 rounded-md text-white ${
+                      isEmailEmpty ? 'opacity-70' : ''
+                    }`}
+                  >
                     Notify Me
-                  </button></div>
+                  </button>
+                </div>
+               
                 <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
                   <a className="text-gray-900">office@avinyainfinitysolutions.com</a>
                   <p className="leading-normal my-5">
@@ -88,13 +104,14 @@ const Home = () => {
                   </div>
                 </div>
 
+                </div>
               </div>
             </div>
-          </div>
+         
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Home;
