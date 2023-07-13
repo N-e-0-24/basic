@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit2 = () => {
-    navigate('/thankYou');
+    navigate("/thankYou");
   };
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
   };
 
-  const isEmailEmpty = email.trim() === '';
+  const isEmailEmpty = email.trim() === "";
 
   return (
     <div>
@@ -21,11 +21,11 @@ const Home = () => {
         <form action="post">
           <div className="max-w-sm rounded-3xl p-px">
             <div className="rounded-[2px]  ">
-              <div>
+             
                 <h1 className="text-4xl ml-4 font-bold bg-gradient-to-r from-blue-700 to-amber-500 bg-clip-text text-transparent">
                   Coming Soon!
                 </h1>
-              </div>
+            
 
               <div className="mt-8 space-y-8">
                 <div className="flex">
@@ -43,25 +43,25 @@ const Home = () => {
                   <button
                     onClick={handleSubmit2}
                     disabled={isEmailEmpty}
-                    
                     className={`h-9 px-2 mx-2 bg-gradient-to-r from-blue-700 to-amber-500 transition duration-500 rounded-md text-white ${
-                      isEmailEmpty ? 'opacity-70' : ''
+                      isEmailEmpty ? "opacity-70" : ""
                     }`}
                   >
                     Notify Me
                   </button>
                 </div>
-               
+
                 <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
-                  <a className="text-gray-900">office@avinyainfinitysolutions.com</a>
+                  <a className="text-gray-900">
+                    office@avinyainfinitysolutions.com
+                  </a>
                   <p className="leading-normal my-5">
-                    RP3H+VFM
+                    V-Square, opp. ITI Ltd, NH-544
                     <br />
                     Kanjikode, Kerala 678623
                   </p>
 
                   <div className="flex mt-4 space-x-6 sm:justify-center md:mt-0">
-
                     <a
                       href="https://instagram.com/avinya_infinity_official?igshid=YmMyMTA2M2Y=="
                       className="text-gray-400 hover:text-gray-900 dark:hover:text-white"
@@ -98,16 +98,21 @@ const Home = () => {
                       href="https://www.linkedin.com/company/avinya-infinity-solutions-pvt-ltd/"
                       className="text-gray-400 hover:text-gray-900 dark:hover:text-white"
                     >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z" /></svg>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z" />
+                      </svg>
                       <span className="sr-only">LinkedIn Account</span>
                     </a>
                   </div>
                 </div>
-
-                </div>
               </div>
             </div>
-         
+          </div>
         </form>
       </div>
     </div>
